@@ -3,21 +3,42 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>User timezone</title>
+        <title>
+            По сути бот | po-suti-bot.com | @po_suti_com_bot (telegram)
+        </title>
+        <meta
+            name="description"
+            content="По сути бот - Ассистент который готовит каждодневные отчеты по вашим телеграм чатам."
+        />
+        <meta
+            property="og:title"
+            content="По сути бот | Интеллектуальный Telegram Ассистент"
+        />
+        <meta
+            property="og:description"
+            content="Получайте быстрые, точные ответы с По сути бот в Telegram."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://po-suti-bot.com" />
+        <meta name="robots" content="noindex, nofollow" />
         <style>
             html,
             body {
                 margin: 0;
                 padding: 0;
                 height: 100%;
+                font-size: 18px;
+                line-height: 1.5;
+                color: #fff;
+                background-color: #000;
             }
             main {
                 display: flex;
+                flex-direction: column;
                 justify-content: center;
                 align-items: center;
                 height: 100vh;
-                color: #fff;
-                background-color: #000;
+                width: 100vw;
             }
             h1,
             h2,
@@ -41,18 +62,25 @@
                 display: flex;
                 flex-direction: column;
                 padding: 0 24px;
-                align-items: center;
-                justify-content: center;
             }
-            .timezone-text {
-                font-size: 16px;
-                text-align: center;
-                margin-bottom: 14px;
+            .timezone-logo {
+                font-size: 36px;
+                font-weight: 600;
+                padding-bottom: 8px;
             }
             .timezone-value {
-                cursor: pointer;
-                font-size: 10vw;
-                text-align: center;
+                padding-top: 16px;
+                font-size: 12vw;
+                line-height: normal;
+            }
+            .timezone-container-top {
+                display: flex;
+                flex-direction: column;
+                padding-bottom: 64px;
+            }
+            .timezone-container-bottom {
+                display: flex;
+                flex-direction: column;
             }
         </style>
     </head>
@@ -62,10 +90,19 @@
                 class="timezone-container"
                 href="https://t.me/yoursummarizationbot?text=%2Fset_timezone%20[TIMEZONE]"
             >
-                <p class="timezone-text">
-                    Just click here to complete the onboarding.
-                </p>
-                <p class="timezone-value"></p>
+                <div class="timezone-container-top">
+                    <h1 class="timezone-logo">По сути бот</h1>
+                    <p style="max-width: 440px">
+                        Твой умный ассистент, который превращает хаос
+                        телеграм-чатов в четкие и понятные ежедневные отчеты.
+                    </p>
+                </div>
+                <div class="timezone-container-bottom">
+                    <p style="font-size: 16px">
+                        Просто кликни сюда чтобы завершить начатое.
+                    </p>
+                    <p class="timezone-value"></p>
+                </div>
             </a>
         </main>
         <script>
