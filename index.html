@@ -27,10 +27,13 @@
                 margin: 0;
                 padding: 0;
                 height: 100%;
-                font-size: 18px;
+                font-size: 16px;
                 line-height: 1.5;
                 color: #fff;
                 background-color: #000;
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI',
+                    Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji',
+                    'Segoe UI Emoji', 'Segoe UI Symbol';
             }
             main {
                 display: flex;
@@ -70,8 +73,12 @@
             }
             .timezone-value {
                 padding-top: 16px;
-                font-size: 12vw;
+                font-size: 10vw;
                 line-height: normal;
+                font-weight: 600;
+            }
+            .timezone-text {
+                text-decoration: underline;
             }
             .timezone-container-top {
                 display: flex;
@@ -81,6 +88,15 @@
             .timezone-container-bottom {
                 display: flex;
                 flex-direction: column;
+                align-items: flex-start;
+            }
+            .timezone-description {
+                max-width: 460px;
+            }
+            @media (min-width: 768px) {
+                .timezone-text:hover {
+                    text-decoration: none;
+                }
             }
         </style>
     </head>
@@ -91,16 +107,14 @@
                 href="https://t.me/yoursummarizationbot?text=%2Fset_timezone%20[TIMEZONE]"
             >
                 <div class="timezone-container-top">
-                    <h1 class="timezone-logo">По сути бот</h1>
-                    <p style="max-width: 440px">
+                    <h1 class="timezone-logo">«По сути» бот</h1>
+                    <p class="timezone-description">
                         Твой умный ассистент, который превращает хаос
                         телеграм-чатов в четкие и понятные ежедневные отчеты.
                     </p>
                 </div>
                 <div class="timezone-container-bottom">
-                    <p style="font-size: 16px">
-                        Просто кликни сюда чтобы завершить начатое.
-                    </p>
+                    <p class="timezone-text">Давай начнем?</p>
                     <p class="timezone-value"></p>
                 </div>
             </a>
