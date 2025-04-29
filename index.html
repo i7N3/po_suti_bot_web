@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>User timezone</title>
+        <style>
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+                height: 100%;
+            }
+            main {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                color: #fff;
+                background-color: #000;
+            }
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            p,
+            a {
+                margin: 0;
+                padding: 0;
+            }
+            a {
+                border: none;
+                color: #fff;
+                outline: none;
+                text-decoration: none;
+                -webkit-tap-highlight-color: transparent;
+            }
+            .timezone-container {
+                display: flex;
+                flex-direction: column;
+                padding: 0 24px;
+                align-items: center;
+                justify-content: center;
+            }
+            .timezone-text {
+                font-size: 16px;
+                text-align: center;
+                margin-bottom: 14px;
+            }
+            .timezone-value {
+                cursor: pointer;
+                font-size: 10vw;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <a
+                class="timezone-container"
+                href="https://t.me/yoursummarizationbot?text=%2Fset_timezone%20[TIMEZONE]"
+            >
+                <p class="timezone-text">
+                    Just click here to complete the onboarding.
+                </p>
+                <p class="timezone-value"></p>
+            </a>
+        </main>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const timezone =
+                    Intl.DateTimeFormat().resolvedOptions().timeZone;
+                const containerEl = document.querySelector(
+                    '.timezone-container',
+                );
+                const valueEl = document.querySelector('.timezone-value');
+                valueEl.textContent = timezone;
+                containerEl.href = containerEl.href.replace(
+                    '[TIMEZONE]',
+                    encodeURIComponent(timezone),
+                );
+            });
+        </script>
+    </body>
+</html>
